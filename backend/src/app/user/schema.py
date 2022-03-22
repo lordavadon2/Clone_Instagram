@@ -2,14 +2,16 @@ from pydantic import BaseModel, constr, EmailStr
 
 
 class User(BaseModel):
-    name: constr(min_length=2, max_length=50)
+    username: constr(min_length=2, max_length=50)
+
+
+class BaseUser(User):
     email: EmailStr
     password: str
 
 
 class DisplayUser(BaseModel):
-    id: int
-    name: str
+    username: str
     email: str
 
     class Config:
