@@ -11,10 +11,4 @@ DATABASE_PORT = os.getenv('DATABASE_PORT', '*******')
 DATABASE_NAME = os.getenv('DATABASE_NAME', '*******')
 TEST_DATABASE_NAME = os.getenv('DATABASE_NAME', 'test_db')
 
-
-MAIL_USERNAME = os.getenv('MAIL_USERNAME')
-MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-MAIL_FROM = os.getenv('MAIL_FROM')
-MAIL_PORT = int(os.getenv('MAIL_PORT', 0))
-MAIL_SERVER = os.getenv('MAIL_SERVER')
-MAIL_FROM_NAME = os.getenv('MAIN_FROM_NAME')
+ALLOWED_HOSTS = ['http://loacalhost:3000', 'http://127.0.0.1:3000']
