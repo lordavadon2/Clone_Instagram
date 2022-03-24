@@ -1,9 +1,9 @@
 from datetime import datetime
-from typing import List, Optional, Dict, Any
+from typing import List
 
 from pydantic import BaseModel
 
-from src.app.comments.schema import Comment
+from src.app.comments.schema import CommentResponse
 from src.app.user.schema import DisplayUser
 
 
@@ -20,7 +20,7 @@ class PostDisplay(BaseModel):
     caption: str
     timestamp: datetime
     user: DisplayUser
-    comments: List[Comment]
+    comments: List[CommentResponse]
 
     class Config:
         orm_mode = True

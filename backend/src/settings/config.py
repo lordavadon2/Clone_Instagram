@@ -11,4 +11,4 @@ DATABASE_PORT = os.getenv('DATABASE_PORT', '*******')
 DATABASE_NAME = os.getenv('DATABASE_NAME', '*******')
 TEST_DATABASE_NAME = os.getenv('DATABASE_NAME', 'test_db')
 
-ALLOWED_HOSTS = ['http://loacalhost:3000', 'http://127.0.0.1:3000']
+ALLOWED_HOSTS = ['http://localhost:3000', 'http://127.0.0.1:3000']
