@@ -21,7 +21,7 @@ def create_post(comment: schema.Comment, database: Session = Depends(db.get_db))
     return services.create_comment(comment, database)
 
 
-@router.get('/<post_id>/all',
+@router.get('/{post_id}/all',
             status_code=status.HTTP_200_OK,
             response_model=List[schema.CommentResponse])
 def post_list(post_id: int, database: Session = Depends(db.get_db)) -> List[models.Comment]:
